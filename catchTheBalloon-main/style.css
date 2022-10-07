@@ -1,0 +1,302 @@
+#canvas {
+  background-image: url("../img/frontBackground.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+#canvas1 {
+  border: 5px solid black;
+  display: flex;
+  margin: auto;
+}
+
+#startScreen {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-image: url("../img/frontBackground2.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+#startButtonBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  margin-bottom: 20px;
+}
+
+#startButton {
+  border: none;
+  background-color: transparent;
+  font-family: "DotGothic16", sans-serif;
+  color: black;
+  cursor: crosshair;
+  font-size: 8rem;
+  margin-top: auto;
+  margin-bottom: 30px;
+}
+
+#descriptionBox {
+  margin: auto;
+  padding-bottom: 30px;
+  display: flex;
+  background-color: transparent;
+  width: 30%;
+  top: 60%;
+  justify-content: center;
+}
+
+#descriptionBox2 {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  font-family: "DotGothic16", sans-serif;
+  padding: 15px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  width: 500px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+  color: black;
+  background-color: rgba(246, 193, 87, 0.8);
+  border: darkkhaki solid 4px;
+}
+
+#about {
+  display: flex;
+  margin: auto;
+  border: darkkhaki solid 4px;
+  background-color: darkgoldenrod;
+  color: black;
+  top: 20%;
+  font-family: "DotGothic16", sans-serif;
+  cursor: crosshair;
+}
+
+#instructions {
+  display: flex;
+  margin: auto;
+  border: darkkhaki solid 4px;
+  background-color: darkgoldenrod;
+  color: black;
+  top: 20%;
+  font-family: "DotGothic16", sans-serif;
+  cursor: crosshair;
+}
+
+#startButton {
+  transition-duration: 0.4s;
+}
+
+#startButton:hover {
+  background-color: transparent;
+  color: darkgoldenrod;
+}
+
+#about {
+  transition-duration: 0.4s;
+}
+
+#about:hover {
+  background-color: black;
+  color: white;
+}
+
+#instructions {
+  transition-duration: 0.4s;
+}
+
+#instructions:hover {
+  background-color: black;
+  color: white;
+}
+
+#bottomInfo {
+  display: flex;
+  position: relative;
+  color: white;
+  background-color: black;
+  opacity: 50%;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+#menu {
+  height: 60px;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-bottom: 3px outset black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.menuButtons {
+  border: black solid 2.5px;
+  background-color: darkgoldenrod;
+  color: black;
+  font-family: "DotGothic16", sans-serif;
+  cursor: crosshair;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  transition-duration: 0.4s;
+}
+
+.menuButtons:hover {
+  background-color: black;
+  color: white;
+}
+
+body {
+  background-color: darkslategray;
+  height: 100vh;
+}
+
+#characterSelection {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  /* transform: translate(-120%, -80%) scale(0); */
+  transform: scale(0);
+  border: 5px solid black;
+  z-index: 10; /* let it stand out above other contents */
+  background-color: rgb(45, 45, 45, 0.5);
+  width: 400px;
+  max-width: 80%;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+}
+
+#characterSelection.active {
+  /* transform: translate(-120%, -80%) scale(1); */
+  transform: scale(1);
+}
+
+#characterHeader {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "DotGothic16", sans-serif;
+  border-bottom: ridge 2px black;
+}
+
+#characterTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#closeButton {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#characterBody {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.characterBoxes {
+  margin: auto;
+}
+
+.characterBoxes img {
+  width: 30%;
+  height: auto;
+  padding: 15px;
+  display: flex;
+  margin: auto;
+}
+
+.characterButtons {
+  border: black solid 4px;
+  background-color: darkgoldenrod;
+  color: black;
+  cursor: crosshair;
+  display: flex;
+  margin: auto;
+  font-family: "DotGothic16", sans-serif;
+  font-weight: bold;
+  transition-duration: 0.4s;
+}
+.characterButtons:hover {
+  background-color: black;
+  color: white;
+}
+
+#gameNotification {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-family: "DotGothic16", sans-serif;
+  background-color: #f8f0e3;
+  border: 5px solid black;
+  border-radius: 5px;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  max-width: 50%;
+  font-size: 20px;
+}
+
+#buttonBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.buttons {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: black solid 2.5px;
+  background-color: darkgoldenrod;
+  color: black;
+  font-family: "DotGothic16", sans-serif;
+  cursor: crosshair;
+  transition-duration: 0.4s;
+}
+
+.buttons:hover {
+  background-color: black;
+  color: goldenrod;
+}
